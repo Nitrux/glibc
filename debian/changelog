@@ -1,3 +1,9 @@
+glibc (2.34-0nitrux1) nitrux; urgency=medium
+
+  * Glibc version 2.34.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Fri, 27 Aug 2021 16:12:00 -0500
+
 glibc (2.33-0ubuntu9) impish; urgency=medium
 
   * debian/patches/git-updates.diff: update from upstream stable branch

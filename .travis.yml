@@ -3,6 +3,9 @@ dist: focal
 before_install:
   - gem install package_cloud
 
+before_script:
+  - while travis_wait 50 sleep 300 &> /tmp/build.log || (tail -n 100 /tmp/build.log && exit 1); do echo "=====[ $SECONDS seconds, buildroot still building... ]====="; done
+
 script:
   - sudo ./travis-build.sh
   - package_cloud push nitrux/repo/debian/trixie *.deb
