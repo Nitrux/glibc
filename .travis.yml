@@ -1,18 +1,11 @@
 dist: focal
 
-cache:
-  directories:
-  - $HOME/.cache
-
 before_install:
   - gem install package_cloud
 
 script:
-  - sudo ./travis-build.sh > cmd_output.txt
+  - sudo ./travis-build.sh
   - package_cloud push nitrux/repo/debian/trixie *.deb
-
-after_failure:
-  - tail -n 500 cmd_output.txt
 
 branches:
   only:
