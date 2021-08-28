@@ -19,6 +19,8 @@ mv glibc/* .
 
 rm -rf glibc NEWS README MAINTAINERS COPYING INSTALL
 
+(while sleep 300; do echo ::; done) &
+
 ### Build Deb
 
 mkdir source
